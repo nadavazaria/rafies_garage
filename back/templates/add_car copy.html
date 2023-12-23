@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+<h1>{% block title %}about{% endblock %}</h1>
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+<h1> a little about us </h1>
+<p>you can register a car here or search out one of your registered cars</p>
+<div class="bg-success p-2 text-dark bg-opacity-25">
+    <form action="/about" method="post">
+        <div style=margin:10% class="form-floating mb-3">
+            
+            <input class="form-control" type="text" name="username" placeholder="enter username">
+            <label> enter username </label>
+        </div>
+        <div style=margin:10% class="form-floating mb-3">
+            <input class="form-control" id="car_num" type="text" name="car_number" placeholder="enter car number">
+            <label> enter car number here</label>
+        </div>
+        <div style=margin:10% class="form-floating mb-3">
+            <input class="form-control" id="car_number" type="text" name="car_model" placeholder= 2015>
+            <label for="car_num"> enter car model here</label>
+
+        </div>
+
+        <div style=margin:10% class="form-floating mb-3">
+            <button> <input type="submit" placeholder="add car"> add car on your name</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

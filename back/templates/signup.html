@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+<h1>hello sir welcome to rafies garage please sign up to use our awsome website</h1>
+{% endblock %}
+<h1>{% block title %}
+  {{super()}}
+  signup{% endblock %}</h1>
+
+{% block content %}
+<div>
+<h3 style="text-align: center;">{{msg}}</h3 style="text-align: center;">
+</div>
+<div class="bg-success p-2 text-dark bg-opacity-25">
+  <form action="/signup" method="post">
+    <div style=margin:10% class="form-floating mb-3">
+
+      <input name="username" type="text" class="form-control" id="floatingInput" placeholder="user123">
+      <label for="floatingInput">user name</label>
+    </div>
+    <div style=margin:10% class="form-floating mb-3">
+
+      <input name="email" type="text" class="form-control" id="floatingInput1" placeholder="example.mail@gmail.com">
+      <label for="floatingInput1">email</label>
+    </div>
+
+    <div style=margin:10% class="form-floating">
+
+      <input name=phone_num type="number" class="form-control" id="floatingPassword" placeholder="050-1233456">
+      <label for="floatingPassword">phone number</label>
+    </div>
+    <div style=margin:10% class="form-floating">
+
+      <input name=password type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
+    <input type="submit">
+  </form>
+
+  {% endblock %}

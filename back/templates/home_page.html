@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+<h1>{% block title %}home page{% endblock %}</h1>
+
+{% block header %}
+<h1> hello <strong>{{context.loged_user}}</strong> welcome to the rafi garage</h1>
+<h3>what would you like to do ? </h3> 
+{% endblock %}
+
+{% block content %}
+<a href="http://127.0.0.1:5000/login"><button type="button" class="btn btn-primary">switch users</button></a>
+<button type="button" class="btn btn-success">add a car to fix  </button>
+<button type="button" class="btn btn-success"> search a car by number </button>
+<!-- <button type="button" class="btn btn-danger"> remove car from our garage </button> -->
+<div id = "onScreenCars">
+<h1>{{loged_user}}'s cars</h1>
+
+</div>
+
+<script>
+    // make a function to add the loged users cars to the screen 
+
+</script>
+{% endblock %}
